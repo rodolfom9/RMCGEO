@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ligalinhaui</class>
+ <widget class="QWidget" name="ligalinhaui">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>271</width>
+    <height>196</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ligar Linha ao Ponto</string>
+  </property>
+  <widget class="QLabel" name="label_status">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>5</y>
+     <width>113</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Status: Desativado</string>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>30</y>
+     <width>261</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Menu</string>
+    </attribute>
+    <widget class="QPushButton" name="btn_toggle">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>87</y>
+       <width>245</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ativar</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="combo_layer_ponto">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>48</y>
+       <width>120</width>
+       <height>30</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="combo_field_ponto">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>48</y>
+       <width>120</width>
+       <height>30</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="combo_layer_linha">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>10</y>
+       <width>120</width>
+       <height>30</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="combo_field_linha">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>10</y>
+       <width>120</width>
+       <height>30</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Como Utilizar</string>
+    </attribute>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>231</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Preguiça de Escrever algo no momento</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>60</y>
+       <width>191</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>telegram @rodolfo09</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

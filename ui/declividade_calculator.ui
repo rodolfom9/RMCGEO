@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DeclividadeDialog</class>
+ <widget class="QDialog" name="DeclividadeDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Calculadora de Declividade</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+QLabel {
+    color: #232629;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px;
+}
+
+QLineEdit {
+    padding: 6px;
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+    background-color: white;
+    font-size: 11px;
+    min-height: 20px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #3498db;
+    background-color: #f8f9fa;
+}
+
+QPushButton {
+    padding: 6px 12px;
+    border: 1px solid #3498db;
+    border-radius: 3px;
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+    min-height: 24px;
+}
+
+QPushButton:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+QPushButton:pressed {
+    background-color: #2472a4;
+    border-color: #2472a4;
+}
+
+QGroupBox {
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+    margin-top: 10px;
+    padding-top: 15px;
+    font-weight: bold;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 3px;
+}
+
+QTextEdit {
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: white;
+    font-size: 11px;
+}
+
+QComboBox {
+    padding: 5px;
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+    background-color: white;
+    min-height: 20px;
+}
+
+QComboBox:focus {
+    border: 1px solid #3498db;
+}
+
+QComboBox::drop-down {
+    border: none;
+}
+
+QComboBox::down-arrow {
+    image: url(down_arrow.png);
+    width: 12px;
+    height: 12px;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>8</number>
+   </property>
+   <property name="leftMargin">
+    <number>12</number>
+   </property>
+   <property name="topMargin">
+    <number>12</number>
+   </property>
+   <property name="rightMargin">
+    <number>12</number>
+   </property>
+   <property name="bottomMargin">
+    <number>12</number>
+   </property>
+   <item>
+    <widget class="QGroupBox" name="groupBoxEntrada">
+     <property name="title">
+      <string>Dados de Entrada</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <property name="fieldGrowthPolicy">
+       <enum>QFormLayout::ExpandingFieldsGrow</enum>
+      </property>
+      <property name="labelAlignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="labelDistancia">
+        <property name="text">
+         <string>Distância Horizontal (m):</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="distanciaInput">
+        <property name="toolTip">
+         <string>Informe a distância horizontal em metros</string>
+        </property>
+        <property name="placeholderText">
+         <string>Ex.: 100.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="labelDesnivel">
+        <property name="text">
+         <string>Desnível (m):</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="desnivelInput">
+        <property name="toolTip">
+         <string>Informe o desnível em metros</string>
+        </property>
+        <property name="placeholderText">
+         <string>Ex.: 10.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="labelUnidade">
+        <property name="text">
+         <string>Unidade de Saída:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="unidadeCombo">
+        <property name="toolTip">
+         <string>Selecione a unidade de saída desejada</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Porcentagem (%)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Graus (°)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Razão (1:X)</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBoxResultado">
+     <property name="title">
+      <string>Resultado</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QTextEdit" name="resultadoText">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="toolTip">
+         <string>Resultado do cálculo de declividade</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBoxClassificacao">
+     <property name="title">
+      <string>Classificação da Declividade</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QTextEdit" name="classificacaoText">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="toolTip">
+         <string>Classificação da declividade segundo a EMBRAPA</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>8</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="calcularButton">
+       <property name="text">
+        <string>Calcular</string>
+       </property>
+       <property name="toolTip">
+        <string>Calcular a declividade</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="limparButton">
+       <property name="text">
+        <string>Limpar</string>
+       </property>
+       <property name="toolTip">
+        <string>Limpar todos os campos</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="fecharButton">
+       <property name="text">
+        <string>Fechar</string>
+       </property>
+       <property name="toolTip">
+        <string>Fechar a calculadora</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui> 

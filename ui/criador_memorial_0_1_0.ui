@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MemorialDescritivo</class>
+ <widget class="QDialog" name="MemorialDescritivo010">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>856</width>
+    <height>875</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>450</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Memorial Descritivo</string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item>
+    <widget class="QTabWidget" name="tabs">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab_config">
+      <attribute name="title">
+       <string>Configuração</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="configLayout">
+       <item>
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="title">
+          <string>Seleção da Camada de Polígono</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_camada">
+            <item>
+             <widget class="QLabel" name="label_camada">
+              <property name="text">
+               <string>Camada Poligono:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="input_layer_poligono">
+              <property name="minimumSize">
+               <size>
+                <width>225</width>
+                <height>22</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_5">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="title">
+          <string>Seleção de Campos da Tabela</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_14">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_15">
+              <item>
+               <widget class="QLabel" name="label_campo_nome">
+                <property name="text">
+                 <string>Imóvel:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="combo_imovel"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_16">
+              <item>
+               <widget class="QLabel" name="label_campo_cns">
+                <property name="text">
+                 <string>CNS (Cartório):</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="combo_cns"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_22">
+              <item>
+               <widget class="QLabel" name="label_campo_matricula">
+                <property name="text">
+                 <string>Matrícula:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="combo_matricula"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_20">
+              <item>
+               <widget class="QLabel" name="label_campo_uf">
+                <property name="text">
+                 <string>UF:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="combo_uf"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_24">
+              <item>
+               <widget class="QLabel" name="label_campo_municipio">
+                <property name="text">
+                 <string>Município:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="combo_municipio"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_27">
+              <item>
+               <widget class="QLabel" name="label_campo_proprietario">
+                <property name="text">
+                 <string>Proprietário:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="combo_proprietario"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_23">
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>Confrontante:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="combo_confrontante"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_6">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="title">
+          <string>Inserção Manual de Campos</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_17">
+            <item>
+             <widget class="QCheckBox" name="checkBox_manual_imovel"/>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="input_manual_imovel">
+              <property name="placeholderText">
+               <string>Inserir Manualmente o Imóvel</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_18">
+            <item>
+             <widget class="QCheckBox" name="checkBox_cns_manual"/>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_cns">
+              <property name="placeholderText">
+               <string>Inserir Manualmente o CNS</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_19">
+            <item>
+             <widget class="QCheckBox" name="checkBox_matricula_manual"/>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_matricula">
+              <property name="placeholderText">
+               <string>Inserir Manualmente a Matrícula</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_25">
+            <item>
+             <widget class="QCheckBox" name="checkBox_uf_manual"/>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_uf">
+              <property name="placeholderText">
+               <string>Inserir Manualmente a UF</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_26">
+            <item>
+             <widget class="QCheckBox" name="checkBox_municipio_manual"/>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_municipio">
+              <property name="placeholderText">
+               <string>Inserir Manualmente o Município</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_28">
+            <item>
+             <widget class="QCheckBox" name="checkBox_proprietario_manual"/>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="digitar_proprietario">
+              <property name="placeholderText">
+               <string>Inserir Manualmente o Proprietário</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="grupo_cabecalho">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="title">
+          <string>Cabeçalho do Memorial</string>
+         </property>
+         <layout class="QGridLayout" name="cabecalhoLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_projeto">
+            <property name="text">
+             <string>Nome do Projeto:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="edit_projeto"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_responsavel">
+            <property name="text">
+             <string>Responsável Técnico:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="edit_responsavel"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_crea">
+            <property name="text">
+             <string>CREA:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="edit_crea"/>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLabel" name="label_data">
+            <property name="text">
+             <string>Data da Medição:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QDateEdit" name="edit_data">
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+            <property name="date">
+             <date>
+              <year>2025</year>
+              <month>4</month>
+              <day>15</day>
+             </date>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="layout_botoes">
+         <item>
+          <widget class="QPushButton" name="btn_exportar">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Exportar</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_sair">
+           <property name="text">
+            <string>Sair</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <attribute name="title">
+       <string>Validação</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="grupo_validacoes">
+         <property name="title">
+          <string>Validações Automáticas</string>
+         </property>
+         <layout class="QVBoxLayout" name="validacoesLayout">
+          <item>
+           <widget class="QCheckBox" name="check_validar_vertices">
+            <property name="text">
+             <string>Validar vértices sobrepostos</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="layout_seg">
+            <item>
+             <widget class="QCheckBox" name="check_validar_segmentos">
+              <property name="text">
+               <string>Validar segmentos curtos</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_tolerancia">
+              <property name="text">
+               <string>Tolerância:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="edit_tolerancia">
+              <property name="suffix">
+               <string> cm</string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="value">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="check_validar_poligono">
+            <property name="text">
+             <string>Validar polígono fechado</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBox_4">
+         <property name="title">
+          <string>Outras Funções</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QCheckBox" name="check_vertices_numerados">
+            <property name="text">
+             <string>Mostrar camada temporária com vértices numerados</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QPushButton" name="btn_validar">
+         <property name="text">
+          <string>Validar</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_preview">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <attribute name="title">
+       <string>Preview do Memorial</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="preview_layout">
+       <item>
+        <widget class="QLabel" name="preview_label">
+         <property name="text">
+          <string>Preview do Memorial Descritivo:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="texto_preview">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Como Utilizar</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="como_utilizar_layout">
+       <item>
+        <widget class="QLabel" name="como_utilizar_label">
+         <property name="text">
+          <string>Instruções de Uso do Plugin Memorial Descritivo:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="texto_como_utilizar">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_debug">
+      <attribute name="title">
+       <string>Debug</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="debug_layout">
+       <item>
+        <widget class="QLabel" name="debug_label">
+         <property name="text">
+          <string>Log de Debug:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="texto_debug">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
