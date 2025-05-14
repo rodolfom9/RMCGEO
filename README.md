@@ -1,2 +1,3 @@
 # RMCGEO
 RMCGEO PLUGIN PARA QGIS PARA GERAÇÃO DE MEMORIAL DESCRITIVO 
+This is not the latest version.
